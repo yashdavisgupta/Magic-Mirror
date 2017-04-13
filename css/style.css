@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+body{
+  height:100vh;
+  width: 100vw;
+  background-position:center center;
+  background-color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  margin: 0px;
+  overflow: hidden;
+}
+.blur{
+  -webkit-filter: blur(3px);
+  -webkit-transition: -webkit-filter .4s;
+}
+#city{
+  font-size: 3em;
+}
+#icon{
+  font-size: 12em;
+}
+#temp{
+  font-size: 6em;
+}
+ul{
+  padding: 0px;
+}
+li{
+  list-style:none;
+}
+li>img{
+  width: 1em;
+  height: 1em;
+  margin-top: .1em;
+}
+li{
+  font-size: 1em;
+}
+#date{
+  font-size: 2.5vw;
+  margin: 0px;
+}
+#hourMinute{
+  font-size: 10vw;
+  margin: 0px;
+}
+#second{
+  font-size: 5vw;
+  margin: 0px;
+}
+#Weather{
+  position: absolute;
+  left: 0px;
+  top: 0vh;
+}
+#news{
+  position: absolute;
+  left: 0px;
+  top: 50vh;
+}
+.readout{
+  position: absolute;
+  top: 30vh;
+  left: 50%;
+  transform: translateX(-50%);
+}

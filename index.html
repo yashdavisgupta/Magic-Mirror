@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/news.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/annyang.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <iframe src="particle/index.html" style="width:100vw; height:100vh;" frameBorder="0"></iframe>
+    <div id="Weather">
+        <table>
+            <tr>
+                <td>
+                    <div id='icon'></div>
+                </td>
+                <td>
+                    <div id='temp'></div>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <div class='icons'></div>
+                </td>
+                <td>
+                    <div id='forecast'></div>
+                </td>
+                <td>
+                    <div id='weekdays'></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="news">
+        <div id="results"></div>
+    </div>
+    <div style="position:absolute;top:0px;right:0px;">
+        <p id=hourMinute><span id="second"></span></p>
+        <p id=date></p>
+    </div>
+	<div class="readout">
+		<center>
+			<p id="readOut">Hello, I hope you are having a good day.</p>
+		</center>
+	</div>
+</body>
+
+</html>
