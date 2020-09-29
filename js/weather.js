@@ -1,13 +1,10 @@
 var weekday = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
-d = new Date();
+d = new Date;
 var measurement = 'far';
 $measurement = 'far';
 $(document).ready(function() {
     $measurement = 'far';
     getLocation();
-    $('#switch').click(function() {
-        changeDeg();
-    });
 });
 function setIcon(status) {
     switch (status) {
@@ -56,9 +53,6 @@ function setCurrent(city) {
             if ($('#temp').is(':empty')) {
                 $('#temp').append(inCel(data.main.temp));
             }
-            if ($('#switch').is(':empty')) {
-                $('#switch').append('<button id="toggleDeg" class="btn btn-default">Switch to °F</button>')
-            }
         }
     });
 }
@@ -69,8 +63,8 @@ function setForecast(city, reason) {
         data: {},
         dataType: 'json',
         success: function(data) {
-            $('#forecast').empty();
-            var dayCounter = d.getDay();
+            document.getElementById('forecast').innerHTML = "";
+            var dayCounter = d
             for (i = 0; i <= 4; i++) {
                 if (dayCounter >= weekday.length - 1) {
                     dayCounter = 0
@@ -79,9 +73,9 @@ function setForecast(city, reason) {
                 }
                 if (data.list[i].weather[0].main !== '' && reason !== 'refresh') {
                     $('#weekdays').append(weekday[dayCounter] + '<br/>');
-                    $('.icons').append(getIcon(data.list[i].weather[0].main) + '<br/>');
+                    $('#icons').append(getIcon(data.list[i].weather[0].main) + '<br/>');
                 }
-                $('#forecast').append(inCel(data.list[i].temp.max) + "<br/>");
+                  $('#forecast').append(inCel(data.list[i].temp.max) + "<br/>");
             }
         }
     });
